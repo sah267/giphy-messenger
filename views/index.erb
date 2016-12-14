@@ -22,13 +22,19 @@
 
   <main role="main">
 
+    <%if message != '' %>
+    <div <% if result == 'success' %>class="alert alert-success"<% else %>class="alert alert-danger" <% end %>>
+      <%= message %>
+    </div>
+      <% end %>
+
     <form action="/send">
       <div class="form-group">
         <label for="phone">Phone Number</label>
         <input class="form-control" name="phone" id="phone" type="text" placeholder="XXX-XXX-XXXX">
 
-        <label for="message">Giphy Search Text</label>
-        <input class="form-control" name="message" id="message" type="text" placeholder="happy">
+        <label for="tag">Giphy Search Text</label>
+        <input class="form-control" name="tag" id="tag" type="text" placeholder="happy">
       </div>
 
       <input class="btn btn-primary" type="submit" value="Submit">
