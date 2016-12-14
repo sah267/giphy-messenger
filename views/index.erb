@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PLM CODE EXERCISE</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+<div class="container">
+  <header class="header">
+    <h1><img class="mbta-logo" src="/images/giphy.gif" width="100"><%= title %></h1>
+  </header>
+
+  <main role="main">
+
+    <form action="/send">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input class="form-control" name="phone" id="phone" type="text" placeholder="XXX-XXX-XXXX">
+
+        <label for="message">Giphy Search Text</label>
+        <input class="form-control" name="message" id="message" type="text" placeholder="happy">
+      </div>
+
+      <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+  </main>
+
+</div> <!-- /container -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
