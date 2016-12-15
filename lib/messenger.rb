@@ -8,8 +8,8 @@ class Messenger
 
     # Initialize twilio client
     def initialize
-        account_sid = 'ACa96662fb03827c636c41623c32a21e91'
-        auth_token = 'd7460700606e9a04bd7e4dff4e3f3c9c'
+        account_sid = 'ACf5289c0b265d65b7440c27340aa1d0db'
+        auth_token = 'f2893578e96202c5d48c4bdf00c0fd9e'
         @client = Twilio::REST::Client.new(account_sid, auth_token)
     end
 
@@ -30,7 +30,7 @@ class Messenger
         # try to create message, if fail send 'error' else 'success'
         begin
             @client.account.messages.create(
-                from: '+17745411130',
+                from: '+16176525171',
                 to: phone_number,
                 body: '/giphy ' + message,
                 media_url: image_url
