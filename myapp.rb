@@ -36,7 +36,7 @@ get '/send' do
     # and set template vars
     if parsed['data'].kind_of?(Array)
 
-        message = 'No Giphs Found!'
+        message = '<span class="glyphicon glyphicon-exclamation-sign"></span>  No Giphs Found! Try a different search term.'
         result = 'error'
 
     else
@@ -50,12 +50,12 @@ get '/send' do
         # If send was successful, set successflt templates vars, else set error vars
         if test == 'success'
 
-            message = 'Success! Giphy sent successfully!'
+            message = '<span class="glyphicon glyphicon-ok-sign"></span>  Success! Giphy sent successfully!'
             result = 'success'
 
         else
 
-            message = 'Error: Sorry Something went wrong'
+            message = '<span class="glyphicon glyphicon-exclamation-sign"></span>  Oops! Sorry Something went wrong. Please try again.'
             result = 'error'
 
         end
