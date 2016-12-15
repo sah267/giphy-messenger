@@ -5,5 +5,21 @@ body {
 .container {
     border-radius: 20px;
     background: white;
-    padding: 20px
+    padding: 20px;
+    margin-top:40px;
+    max-width: 800px;
+}
+
+.logo {
+    float: left;
+}
+
+main {
+    clear: both;
+    padding:30px;
+}
+
+.error {
+    display: none;
+    color: #a94442;
 }

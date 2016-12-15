@@ -1,51 +1,65 @@
-
+<!-- Index Page for Giphy App -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>PLM CODE EXERCISE</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+    <title>Giphy</title>
+
+    <!-- Link to Bootstrap Styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Link to Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
 <body>
-<div class="container">
-  <header class="header">
-    <h1><img class="mbta-logo" src="/images/giphy.gif" width="100"><%= title %></h1>
-  </header>
 
-  <main role="main">
+    <div class="container">
+        <header class="header">
+            <img class="logo" src="/images/giphy.gif" width="100">
+            <h1>Random Giphy Messenger</h1>
+            <h5>Enter a phone number and search term to send a related giph to that person</h5>
+        </header>
 
-    <%if message != '' %>
-    <div <% if result == 'success' %>class="alert alert-success"<% else %>class="alert alert-danger" <% end %>>
-      <%= message %>
-    </div>
-      <% end %>
+        <main role="main">
 
-    <form action="/send">
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input class="form-control" name="phone" id="phone" type="text" placeholder="XXX-XXX-XXXX">
+            <!-- if message display it here with proper styles -->
+            <% if message != '' %>
+                <div <% if result == 'success' %>class="alert alert-success"<% else %>class="alert alert-danger"<% end %>>
+                    <%= message %>
+                </div>
+            <% end %>
 
-        <label for="tag">Giphy Search Text</label>
-        <input class="form-control" name="tag" id="tag" type="text" placeholder="happy">
-      </div>
+            <!-- Giphy form for phone and search term inputs -->
+            <form action="/send" onsubmit="return validate();">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input class="form-control" name="phone" id="phone" type="text" placeholder="+XXXXXXXXXXX">
+                    <span class="glyphicon glyphicon-remove error"></span><span class="error">Please Enter Phone number in form: +00000000000</span>
+                </div>
 
-      <input class="btn btn-primary" type="submit" value="Submit">
-    </form>
-  </main>
+                <div class="form-group">
+                    <label for="tag">Giphy Search Text</label>
+                    <input class="form-control" name="tag" id="tag" type="text" placeholder="happy">
+                </div>
 
-</div> <!-- /container -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
-<script src="app.js"></script>
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </form>
+        </main>
+
+    </div> <!-- /container -->
+
+    <!-- Require JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!-- Require Custom JS -->
+    <script src="/js/app.js"></script>
+
 </body>
 </html>
