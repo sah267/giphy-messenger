@@ -23,3 +23,8 @@ main {
     display: none;
     color: #a94442;
 }
+
+#footer {
+    text-align: center;
+    margin-top:7px;
+}
