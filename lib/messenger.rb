@@ -8,8 +8,8 @@ class Messenger
 
     # Initialize twilio client
     def initialize
-        account_sid = 'ACf5289c0b265d65b7440c27340aa1d0db'
-        auth_token = 'f2893578e96202c5d48c4bdf00c0fd9e'
+        account_sid = 'example'
+        auth_token = 'example'
         @client = Twilio::REST::Client.new(account_sid, auth_token)
     end
 
